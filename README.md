@@ -12,19 +12,26 @@
 1. 完成 Header 区域，使用的是 Mint-UI 中的Header组件
 2. 制作底部的 Tabbar 区域，使用的是 MUI 的 Tabbar.html
  + 在制作 购物车 小图标的时候，操作会相对多一些：
- + 先把 扩展图标的 css 样式，拷贝到 项目中
- + 拷贝 扩展字体库 ttf 文件，到项目中
- + 为 购物车 小图标 ，添加 如下样式 `mui-icon mui-icon-extra mui-icon-extra-cart`
+ + 先把 扩展图标的 css 样式，拷贝到 项目中 lib/mui/css
+ + 拷贝 扩展字体库 ttf 文件，到项目中 lib/mui/font
+ + 为 购物车 小图标 ，添加 如下样式 `mui-icon mui-icon-extra mui-icon-extra-cart` 可以在example里的icon里找
 3. 要在 中间区域放置一个 router-view 来展示路由匹配到的组件
 
 ## 改造 tabbar 为 router-link
+1. 导入路由的包，引入路由组件，导入路由模块，在vm对象中注册路由
+2. 修改app.vue中tabbar的标签
 
 ## 设置路由高亮
+1. 在router.js的路由对象里配置linkActiveClass
 
 ## 点击 tabbar 中的路由链接，展示对应的路由组件
+1. 创建components文件夹，专门放子组件，app.vue是跟组件
+2. 在router.js里导入子组件
+3. 在router.js里匹配路由规则
+4. 在vue.js里用<router-view></router-view>表示占位
 
 ## 制作首页轮播图布局
-
+1. 使用mint-ui的轮播图组件
 ## 加载首页轮播图数据
 1. 获取数据， 如何获取呢， 使用 vue-resource
 2. 使用 vue-resource 的 this.$http.get 获取数据

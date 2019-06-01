@@ -3,7 +3,12 @@
     <!-- 顶部 Header 区域 -->
     <!-- 使用的是mint-ui的header组件 -->
     <mt-header fixed title="朱江威·Vue项目"></mt-header>
+
     <!-- 中间的 路由 router-view 区域 -->
+    <transition>
+			<router-view></router-view>
+		</transition>
+
     <!-- 底部 Tabbar 区域 -->
     <!-- 使用的是mui的组件 -->
     <nav class="mui-bar mui-bar-tab">
@@ -27,7 +32,6 @@
       </router-link>
     </nav>
 
-    <h1>作为</h1>
   </div>
 </template>
 
@@ -36,8 +40,23 @@
 
 
 <style lang="scss" scope>
+
 .app-container {
   padding-top: 40px;
   overflow-x: hidden;
+}
+// 切换动画效果
+.v-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.v-leave-to {
+  opacity: 0;
+  transform: translateX(-100%);
+  position: absolute;
+}
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.5s ease;
 }
 </style>

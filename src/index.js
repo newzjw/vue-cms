@@ -2,25 +2,25 @@
 import Vue from 'vue'
 // 1.1 导入路由的包
 import VueRouter from 'vue-router'
-// 1.2 安装路由
+// 1.2 安装路由模块
 Vue.use(VueRouter)
 
 // 2.1 导入 vue-resource
-// import VueResource from 'vue-resource'
+import VueResource from 'vue-resource'
 // 2.2 安装 vue-resource
-// Vue.use(VueResource)
+Vue.use(VueResource)
 
 
 // 导入 MUI 的样式
 import './lib/mui/css/mui.min.css'
 // 导入扩展图标样式
-// import './lib/mui/css/icons-extra.css'
+import './lib/mui/css/icons-extra.css'
 
-// 按需导入 Mint-UI 中的组件   
+// 按需导入 Mint-UI 中的组件，头部，轮播图   
 import { Header, Swipe, SwipeItem } from 'mint-ui'
 // 注册
 Vue.component(Header.name, Header)
-Vue.component(Swipe.name, Swipe)
+Vue.component(Swipe.name, Swipe)   //轮播图组件
 Vue.component(SwipeItem.name, SwipeItem)
 
 
